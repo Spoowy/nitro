@@ -16,4 +16,4 @@ render_element(Record=#dtl{}) ->
 render(M, true, Args) ->
     {ok, R} = M:render(Args),
     {ok, nitro:js_escape(R)};
-render(M, _, Args) -> M:render(Args, [{locale, mws_lang:locale()}]).
+render(M, _, Args) -> M:render(Args, []).
